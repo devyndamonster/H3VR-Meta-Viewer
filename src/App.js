@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect} from "react"
+import DataEntryList from "./components/DataEntryList";
+import Papa from 'papaparse';
+
 
 function App() {
+
+  const [entries, setEntries] = useState([])
+  const [fields, setFields] = useState(["Loading!"])
+
+  useEffect(() => {
+    LoadData();
+  }, []);
+
+  const LoadData = () => {
+
+    fetch('https://raw.githubusercontent.com/devyndamonster/TakeAndHoldTweaker/master/ObjectIDs.csv')
+    .then(function(response){
+      return response.text();
+    }).then(function(text){
+      const csv = Papa.parse(text);
+      console.log("Parsed New Data!");
+
+      setEntries(csv.data.slice(1));
+      setFields(csv.data[0]);
+
+      console.log(fields);
+    });
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <DataEntryList fields={fields} entries={entries}/>
     </div>
   );
 }
