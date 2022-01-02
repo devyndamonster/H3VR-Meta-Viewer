@@ -5,6 +5,10 @@ body{
     color: white;
 }
 
+h1{
+    margin-left: 30px;
+}
+
 table{
     border: 0px;
     border-spacing: 0px;
@@ -14,11 +18,13 @@ td{
     border: 0px;
     padding: 5px;
     min-width: 200px;
+    vertical-align: bottom;
 }
 
 thead tr{
     background-color: rgb(22, 21, 24);
 }
+
 
 tbody tr:nth-child(odd){
     background-color: rgb(38, 37, 41);
@@ -26,3 +32,12 @@ tbody tr:nth-child(odd){
 tbody tr:nth-child(even){
     background-color: rgb(47, 46, 51);
 }
+
+.filter-container{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+

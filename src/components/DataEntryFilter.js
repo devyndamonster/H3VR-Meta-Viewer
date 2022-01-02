@@ -1,11 +1,11 @@
+import React from 'react'
 
-const DataEntryFilter = () => {
+const DataEntryFilter = ({filter, onRemove}) => {
     return (
-        <td>   
-            <button>Hello</button>
-            <button>X</button>
-            <input type="text" style={{width:"100%"}}></input>
-        </td>
+        <div>
+            <button>{filter}</button>
+            <button onClick={() => onRemove(filter)}>X</button>
+        </div>
     )
 }
 

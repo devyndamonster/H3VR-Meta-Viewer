@@ -1,12 +1,12 @@
-import DataEntryFilter from "./DataEntryFilter"
+import DataEntryFilterContainer from "./DataEntryFilterContainer"
 import DataEntryField from "./DataEntryField"
 
-const DataEntryHeader = ({fields}) => {
+const DataEntryHeader = ({fields, filters, setFilters}) => {
     return (
         <>
             <tr>
                 {fields.map((value, index) => {
-                    return <DataEntryFilter key={index} value={value} />
+                    return <DataEntryFilterContainer key={index} value={value} filters={filters} setFilters={setFilters} index={index}/>
                 })}
             </tr>
 
