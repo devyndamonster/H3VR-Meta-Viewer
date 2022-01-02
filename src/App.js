@@ -14,7 +14,7 @@ function App() {
 
   const LoadData = () => {
 
-    fetch('https://raw.githubusercontent.com/devyndamonster/TakeAndHoldTweaker/master/ObjectIDs.csv')
+    fetch('https://raw.githubusercontent.com/devyndamonster/H3VR-Meta-Viewer/master/public/ObjectIDs.csv')
     .then(function(response){
       return response.text();
     }).then(function(text){
