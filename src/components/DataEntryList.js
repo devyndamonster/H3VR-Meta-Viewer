@@ -5,13 +5,9 @@ import DataEntryHeader from "./DataEntryHeader"
 
 const DataEntryList = ({entries, fields}) => {
 
-    const [activeFilters, setActiveFilters] = useState([[]]);
-
+    const [activeFilters, setActiveFilters] = useState([[""]]);
 
     if(activeFilters.length !== fields.length){
-
-        console.log("Differing entry length: " + fields.length);
-
         setActiveFilters(fields.map((value) => {
             return [];
         }))
