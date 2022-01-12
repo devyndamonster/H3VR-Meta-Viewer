@@ -1,6 +1,8 @@
 import { useState, useEffect} from "react"
 import DataEntryList from "./components/DataEntryList";
+import NavBar from "./components/NavBar";
 import Papa from 'papaparse';
+import "./styles/entries.css"
 
 
 function App() {
@@ -31,8 +33,10 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar />
 
-      <DataEntryList fields={fields} entries={entries}/>
+      {entries.length == 0 ? <h1>Loading...</h1> : <DataEntryList fields={fields} entries={entries}/>}
+
     </div>
   );
 }

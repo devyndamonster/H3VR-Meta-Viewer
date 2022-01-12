@@ -41,3 +41,8 @@ tbody tr:nth-child(even){
     flex-direction: row;
 }
 
+.meta-navbar{
+    display: flex;
+    background-color: red;
+}
+

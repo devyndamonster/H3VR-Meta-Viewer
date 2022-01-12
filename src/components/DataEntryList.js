@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import "../styles/entries.css"
 import DataEntry from "./DataEntry"
 import DataEntryHeader from "./DataEntryHeader"
 
@@ -29,8 +28,7 @@ const DataEntryList = ({entries, fields}) => {
 
     return (
         <div>
-            <h1>H3VR Meta Viewer</h1>
-
+            
             <table>
 
                 <thead>
