@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/H3VR-Meta-Viewer/static/css/main.5350c855.css",
-    "main.js": "/H3VR-Meta-Viewer/static/js/main.10efd34a.js",
+    "main.css": "/H3VR-Meta-Viewer/static/css/main.272aec64.css",
+    "main.js": "/H3VR-Meta-Viewer/static/js/main.5b0effba.js",
     "static/js/787.b8f88f34.chunk.js": "/H3VR-Meta-Viewer/static/js/787.b8f88f34.chunk.js",
     "index.html": "/H3VR-Meta-Viewer/index.html",
-    "main.5350c855.css.map": "/H3VR-Meta-Viewer/static/css/main.5350c855.css.map",
-    "main.10efd34a.js.map": "/H3VR-Meta-Viewer/static/js/main.10efd34a.js.map",
+    "main.272aec64.css.map": "/H3VR-Meta-Viewer/static/css/main.272aec64.css.map",
+    "main.5b0effba.js.map": "/H3VR-Meta-Viewer/static/js/main.5b0effba.js.map",
     "787.b8f88f34.chunk.js.map": "/H3VR-Meta-Viewer/static/js/787.b8f88f34.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5350c855.css",
-    "static/js/main.10efd34a.js"
+    "static/css/main.272aec64.css",
+    "static/js/main.5b0effba.js"
   ]
 }
