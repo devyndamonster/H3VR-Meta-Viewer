@@ -14,7 +14,9 @@ const DataEntryList = ({entries, fields}) => {
     
     const shouldDisplayEntry = (entry) => {
 
-        for(let col = 0; col < entry.length; col++){
+        console.log(activeFilters);
+
+        for(let col = 0; col < activeFilters.length; col++){
             
             if(activeFilters[col].length > 0){
                 if(!(activeFilters[col].includes(entry[col]))){
@@ -27,14 +29,15 @@ const DataEntryList = ({entries, fields}) => {
     }
 
     return (
+
         <div>
             
             <table>
 
                 <thead>
-                    <DataEntryHeader fields={fields} filters={activeFilters} setFilters={setActiveFilters}/>
+                        <DataEntryHeader fields={fields} filters={activeFilters} setFilters={setActiveFilters}/>
                 </thead>
-                
+
                 <tbody>
                     {entries.filter((entry) => {
                         return shouldDisplayEntry(entry);

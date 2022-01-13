@@ -1,9 +1,11 @@
 
-const NavBar = () => {
+
+
+const NavBar = ({fields}) => {
     return (
         <div className="meta-navbar">
             <div>
-                <h1>H3VR Meta Viewer</h1>
+                <h1 className="header-text">H3VR Meta Viewer</h1>
             </div>
             
             <div>
