@@ -14,15 +14,19 @@ const DataEntryList = ({entries, fields}) => {
     
     const shouldDisplayEntry = (entry) => {
 
-        console.log(activeFilters);
-
         for(let col = 0; col < activeFilters.length; col++){
             
-            if(activeFilters[col].length > 0){
-                if(!(activeFilters[col].includes(entry[col]))){
-                    return false;
+            var columnValid = activeFilters[col].length == 0;
+
+            for(let filter = 0; filter < activeFilters[col].length; filter++){
+                
+                if(String(entry[col]).toLowerCase().includes(String(activeFilters[col][filter]).toLowerCase())){
+                    columnValid = true;
                 }
+
             }
+
+            if(!columnValid) return false;
         }
 
         return true;

@@ -8,6 +8,7 @@ const NavBar = ({fields}) => {
                 <h1 className="header-text">H3VR Meta Viewer</h1>
             </div>
             
+            {/*
             <div>
                 <button>Display Columns</button>
             </div>
@@ -15,6 +16,8 @@ const NavBar = ({fields}) => {
             <div>
                 <button>Display Spawner</button>
             </div>
+            */}
+            
         </div>
     )
 }

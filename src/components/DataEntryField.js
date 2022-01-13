@@ -2,7 +2,7 @@
 const DataEntryField = ({value}) => {
     return (
         <td>   
-            {value}
+            {String(value)}
         </td>
     )
 }
